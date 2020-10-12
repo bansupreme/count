@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication2
+{
+    class Sqrt
+    {
+        public float _a, _b, _c;
+        public float A { get { return _a; } set { _a = value; } }
+        public float B { get { return _b; } set { _b = value; } }
+        public float C { get { return _c; } set { _c = value; } }
+        public void Equals(float a, float b, float c)
+        {
+            if (a == b) Console.WriteLine("两数相等");
+            else Console.WriteLine("两数不相等");
+        }
+        public float sqr(float _a, float _b, float _c)
+        {
+            _c = _a / _b;
+            return _c;
+        }
+    }
+}

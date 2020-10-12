@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication2
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Add A=new Add();Multiplication M=new Multiplication(); Subtraction Su=new Subtraction(); Sqrt Sq=new Sqrt();
+            Console.WriteLine("请选择1、数字，2、字符串");
+            int x = int.Parse(Console.ReadLine());
+            if (x == 1)
+            {
+                Console.WriteLine("请输入两个数字");
+                float c = 0;
+                float a = float.Parse(Console.ReadLine());
+                float b = float.Parse(Console.ReadLine());
+                A.Equals(a, b, c);
+                Console.WriteLine("加法结果为,{0}", A.add(a, b, c));
+
+                Su.Equals(a, b, c);
+                Console.WriteLine("减法结果为,{0}", Su.sub(a, b, c));
+
+                M.Equals(a, b, c);
+                Console.WriteLine("乘法结果为,{0}", M.Mul(a, b, c));
+
+                Sq.Equals(a, b, c);
+                Console.WriteLine("除法结果为,{0}", Sq.sqr(a, b, c));
+            }
+            else if (x == 2)
+            {
+                Console.WriteLine("请输入两个字符串");
+                
+                string a1="0"; string b1="0"; string c1="0";
+
+                a1 = Console.ReadLine();
+                b1 = Console.ReadLine();
+
+                Console.Write("加法结果为, ");
+                A.add2(a1, b1, c1);
+
+                Console.Write("减法结果为,");
+                Su.sub2(a1, b1);
+            }
+             Console.ReadLine();
+        }
+       
+    }
+
+  }
